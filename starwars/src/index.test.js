@@ -7,25 +7,25 @@ describe('starwars-names', () => {
       expect(starWars.all).toHaveLength(starWarsNames.length)
     });
     test('should be an array of strings', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+      expect(typeof starWars.all).toEqual(Array());
     });
 
     test('should contain `Luke Skywalker`', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+      expect(starWars.all.includes("Luke Skywalker")).toBe(true)
     });
 
     test('should not contain `Ben Quadinaros`', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+      expect(starWars.all.includes("Ben Quadinaros")).toBe(false)
     });
   });
 
   describe('random', () => {
     test('should return a random item from the starWars.all', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+      expect(starWars.all).toEqual(expect.arrayContaining(starWars.random(1)))
     });
 
     test('should return an array of random items if passed a number', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+      expect(starWars.random(5)).toHaveLength(5)
     });
   });
 });
